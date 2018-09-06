@@ -1,0 +1,19 @@
+/get/coinHistory:
+  description: Get coin history
+  post:
+    is:
+      - RequireLogin
+      - RequireLogHeader
+      - ProvideTransaction
+    body:
+      application/json:
+        type: object
+        properties:
+          symbol:
+            description: coin symbol
+            type:        string
+    responses:
+      200:
+        body:
+          application/json:
+            type: ResponseCoinHistory

@@ -1,0 +1,15 @@
+types:
+  ResponseCoinHistoryItem:
+    description: coin history item
+    type:        object
+    properties:
+      coinHistoryID:
+        description: coin history ID
+        type:        UUID
+      symbol:
+        description: coin symbol
+        type:        string
+      timestamp:     Time
+      price:
+        description: coin price at timestamp
+        type:        number

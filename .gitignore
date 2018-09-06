@@ -10,3 +10,10 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+/.cache/
+/tmp/
+/gckeyfile.json
+/GeoLite2-City.mmdb
+/*.pem
+.DS_Store

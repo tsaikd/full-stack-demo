@@ -1,0 +1,11 @@
+/version:
+  description: Get version info
+  get:
+    responses:
+      200:
+        body:
+          application/json:
+            type: object
+            properties:
+              Version:
+                (GoTypeAnonymous): version.Version

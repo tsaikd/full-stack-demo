@@ -1,0 +1,11 @@
+FROM alpine:3.8
+RUN apk add --no-cache curl
+COPY server/dbmigrate /full-stack-demo/server/dbmigrate/
+COPY web/dist /full-stack-demo/web/dist/
+COPY full-stack-demo /full-stack-demo/
+WORKDIR /full-stack-demo
+CMD ["./full-stack-demo", "server"]
+HEALTHCHECK --interval=30s --timeout=3s CMD \
+	curl -s -k -o /dev/null \
+	--header "Docker-Health-Check: true" \
+	https://localhost:3000
